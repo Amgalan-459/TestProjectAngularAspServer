@@ -21,6 +21,10 @@ export class AppComponent {
     });
   }
 
-  
+  weather: WeatherData = {date: "2023-05-05", temperatureC: 0, temperatureF: 0, summary: ""};
+  addWeatherClick() {
+    this.weatherService.addWeatherForecast(this.weather);
+    console.log("added");
+  }
   
 }
