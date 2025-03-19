@@ -14,7 +14,7 @@ export class WeatherService {
     return await firstValueFrom( this.http.get<WeatherData[]>('http://localhost:5071/weather/all'));
   }
 
-  addWeatherForecast( weather: WeatherData ) {
-    this.http.post('http://localhost:5071/weather', weather);
+  async addWeatherForecast( weather: WeatherData ) {
+    return await firstValueFrom(this.http.post('http://localhost:5071/weather', weather));
   }
 }
