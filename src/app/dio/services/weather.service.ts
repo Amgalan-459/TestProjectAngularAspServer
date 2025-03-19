@@ -15,6 +15,6 @@ export class WeatherService {
   }
 
   addWeatherForecast( weather: WeatherData ) {
-    this.http.post('https://localhost:5071/weather', weather);
+    this.http.post('http://localhost:5071/weather', weather);
   }
 }
