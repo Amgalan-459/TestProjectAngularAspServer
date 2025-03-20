@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TestItemsComponent } from "./test-items/test-items.component";
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { WeatherService } from './dio/services/weather.service';
 import { WeatherData } from './interfaces/weather-data';
+import { TestItemsComponent } from "./test-items/test-items.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestItemsComponent],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
